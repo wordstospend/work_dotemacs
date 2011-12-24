@@ -1,0 +1,2 @@
+; Set up my cool theme that is nice and dark
+(require 'solarized-dark-theme)

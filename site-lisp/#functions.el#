@@ -1,0 +1,18 @@
+(defun banish (l) (append (cdr l) (list (car l))))
+(defun ido-jump-to-window ()
+  (interactive)
+  (let* ((visible-buffers (banish (mapcar '(lambda (window) (buffer-name (window-buffer window))) (window-list))))
+         (buffer-name (ido-completing-read "Window: " visible-buffers))
+         window-of-buffer)
+    (if (not (member buffer-name visible-buffers))
+        (error "'%s' does not have a visible window" buffer-name)
+      (setq window-of-buffer
+                (delq nil (mapcar '(lambda (window)
+                                       (if (equal buffer-name (buffer-name (window-buffer window)))
+                                           window
+                                         nil))
+                                  (window-list))))
+      (select-window (car window-of-buffer)))))
+
+(define-key global-map (kbd "C-x v") 'ido-jump-to-window)
+

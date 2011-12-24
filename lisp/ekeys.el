@@ -1,0 +1,12 @@
+(setq mac-command-modifier 'meta)
+
+(global-set-key (kbd "M-g") 'goto-line)
+(global-set-key (kbd "C-a") 'back-to-indentation)
+(global-set-key (kbd "M-m") 'move-beginning-of-line)
+
+; M-x can be hard to hit...
+(global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "\C-c\C-m" 'execute-extended-command)
+
+(defalias 'qrr 'query-replace-regexp)          ; Define alias for query
+
