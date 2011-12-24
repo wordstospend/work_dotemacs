@@ -25,5 +25,8 @@
  ;; show matching/deepness
 (global-rainbow-mode)
 
+
+(setq backup-directory-alist `((".*" . "~/.emacs_backup")))
+
 (provide 'load-globals)
 
