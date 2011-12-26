@@ -10,3 +10,4 @@
 
 (defalias 'qrr 'query-replace-regexp)          ; Define alias for query
 
+(global-set-key (kbd "C-x v s") 'magit-status)
