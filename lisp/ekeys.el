@@ -4,10 +4,17 @@
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "M-m") 'move-beginning-of-line)
 
-; M-x can be hard to hit...
+;; M-x can be hard to hit...
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\C-c\C-m" 'execute-extended-command)
 
-(defalias 'qrr 'query-replace-regexp)          ; Define alias for query
+(defalias 'qrr 'query-replace-regexp)          ; Define alias for query replace, which is long to M-x
 
+;; Shadow vc-mode's keyboard, since magit is usually more useful to me
 (global-set-key (kbd "C-x v s") 'magit-status)
+
+;; Set up a nice keybinding for iedit
+(global-set-key (kbd "M-'") 'iedit-mode)
+
+;; The original M-z is really hard to hit, and zap-to-char is pretty useful, so...
+(global-set-key (kbd "C-x C-k") 'zap-to-char)

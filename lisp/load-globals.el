@@ -7,17 +7,17 @@
 ;; Set the line numbers
 (global-linum-mode 1)
 
-(require 'undo-tree)
 
 ;;shows a tree of undos in a seperate buffer. Use C-x u to visualize!
+(require 'undo-tree)
 (global-undo-tree-mode)
 
 ;; Turn on global-subword-mode, to recognize word boundaries
 ;; in camelCase
 (global-subword-mode t)
 
-(require 'visible-mark)
 ;; Make a symbol appear where we last set the mark
+(require 'visible-mark)
 (global-visible-mark-mode)
 
 ;; Automagically opened compressed files if I `Find file` them
@@ -25,5 +25,8 @@
 
 ;; revert buffers automatically when underlying files are changed externally
 (global-auto-revert-mode)
+
+;; Load up iedit, which allows you to edit all instances of a region, like an instance string-replace
+(require 'iedit)
 
 (provide 'load-globals)
