@@ -29,8 +29,7 @@
 ;; Load up iedit, which allows you to edit all instances of a region, like an instance string-replace
 (require 'iedit)
 
-;;
+;; 
 (require 'dired+)
-(dired-)
 
 (provide 'load-globals)
