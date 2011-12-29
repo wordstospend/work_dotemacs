@@ -18,3 +18,6 @@
 
 ;; The original M-z is really hard to hit, and zap-to-char is pretty useful, so...
 (global-set-key (kbd "C-x C-k") 'zap-to-char)
+
+(global-set-key (kbd "C-;") 'comment-or-uncomment-region)
+
