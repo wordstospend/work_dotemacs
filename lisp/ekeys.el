@@ -21,3 +21,7 @@
 
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 
+(global-set-key "\C-cr" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+

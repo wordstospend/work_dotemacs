@@ -9,6 +9,13 @@
 ; Set up the my color theme, and all the colors for various things
 (require 'load-colors)
 
+(require 'load-org)
+
+(require 'auto-recomp)
+
+(require 'auto-install)
+
+(require 'crosshairs)
 ; Provide it so it can be required, so theres an obvious dependency graph and you can just require and not worry about the location/whether or not its compiled(as opposed to load-file)
 (provide 'load-modes)
 
