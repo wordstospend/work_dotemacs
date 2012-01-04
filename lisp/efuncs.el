@@ -1,10 +1,9 @@
 (defun set-exec-path-from-shell-PATH ()
-  (let ((path-from-shell 
-      (replace-regexp-in-string "[[:space:]\n]*$" "" 
+  (let ((path-from-shell
+      (replace-regexp-in-string "[[:space:]\n]*$" ""
         (shell-command-to-string "$SHELL -l -c 'echo $PATH'"))))
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
-
 
 ;; (defun setenv-from-shell (varname)
 ;;   (setenv varname (replace-regexp-in-string
@@ -67,4 +66,5 @@
 
 (add-hook 'after-save-hook 'hlu-make-script-executable)
 
-
+;; Whitespace fucks up poor version control, so lets do away with it
+(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))

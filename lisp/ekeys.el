@@ -19,9 +19,15 @@
 ;; The original M-z is really hard to hit, and zap-to-char is pretty useful, so...
 (global-set-key (kbd "C-x C-k") 'zap-to-char)
 
+; Make it so that C=; toggles the commented-ness of a region
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 
+; Some org shortcuts
 (global-set-key "\C-cr" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+(global-set-key "\M-n" 'hippie-expand)
+
+; Ibuffer is just superior to list-buffers, so lets use that
+(global-set-key (kbd "C-x C-b") 'ibuffer)

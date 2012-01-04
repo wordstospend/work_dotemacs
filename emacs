@@ -5,7 +5,7 @@
 (defun make-path (file)
   (concat emacs-root here file))
 
-(defun add-here (file) 
+(defun add-here (file)
   (add-to-list 'load-path (make-path file)))
 
 ;; Shamelessly stolen from https://sites.google.com/site/steveyegge2/my-dot-emacs-file
@@ -43,7 +43,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ac-delay 0.05)
+ '(ac-auto-start 2)
+ '(ac-delay 0.01)
  '(ac-quick-help-delay 2.0)
  '(ac-show-menu-immediately-on-auto-complete nil)
  '(bmkp-auto-light-when-jump nil)
@@ -74,7 +75,7 @@
  '(initial-buffer-choice nil)
  '(kpm-list-highlight-most-recent 3)
  '(large-file-warning-threshold nil)
- '(org-agenda-files (quote ("/Users/michaelsteger/org/devOpsTwilio.org" "/Users/michaelsteger/org/school.org" "/Users/michaelsteger/org/home.org" "/Users/michaelsteger/org/test.org" "/Users/michaelsteger/org/gtd.org" "/Users/michaelsteger/org/google.org" "/Users/michaelsteger/org/work.org" "/Users/michaelsteger/org/intern.twilio.org")))
+ '(org-agenda-files (quote ("/Users/michaelsteger/org/devOpsTwilio.org" "/Users/michaelsteger/org/school.org" "/Users/michaelsteger/org/home.org" "/Users/michaelsteger/org/test.org" "/Users/michaelsteger/org/gtd.org" "/Users/michaelsteger/org/google.org" "/Users/michaelsteger/org/work.org" "/Users/michaelsteger/org/intern.twilio.org")) t)
  '(org-agenda-skip-scheduled-if-done t)
  '(org-completion-use-ido t)
  '(quack-programs (quote ("stk-explorin" "bigloo" "csi" "csi -hygienic" "gosh" "gracket" "gsi" "gsi ~~/syntax-case.scm -" "guile" "kawa" "mit-scheme" "mzscheme" "racket" "racket -il typed/racket" "rs" "scheme" "scheme48" "scsh" "sisc" "stklos" "sxi")))
@@ -85,10 +86,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(cursor ((t (:background "red" :foreground "#708183" :inverse-video t))))
+ '(flymake-errline ((t (:background "pink2" :foreground "red"))))
+ '(flymake-warnline ((((class color) (background dark)) (:background "DarkBlue" :foreground "Yellow"))))
  '(mode-line-highlight ((t (:box (:line-width 2 :color "red" :style released-button)))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "red"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "green"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "teal"))))
  '(rainbow-delimiters-depth-4-face ((t (:foreground "orange"))))
  '(rainbow-delimiters-depth-5-face ((t (:foreground "brown"))))
+ '(region ((t (:background "gray14"))))
  '(visible-mark-non-trailing-face0 ((t (:foreground "red" :underline t))) t))
+

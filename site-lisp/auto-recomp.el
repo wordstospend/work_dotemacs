@@ -46,9 +46,9 @@
   (when auto-recompile
     (byte-compile-file buffer-file-name)))
 
-(defun add-after-save-hook ()
-  (make-local-hook 'after-save-hook)
-  (add-hook 'after-save-hook 'auto-recompile-file-maybe))
+;; (defun add-after-save-hook ()
+;;   (make-local-hook 'after-save-hook)
+;;   (add-hook 'after-save-hook 'auto-recompile-file-maybe))
 
 (add-hook 'emacs-lisp-mode-hook 'add-after-save-hook)
 
