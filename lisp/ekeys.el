@@ -31,3 +31,7 @@
 
 ; Ibuffer is just superior to list-buffers, so lets use that
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+; get the mode-compile stuff together
+(global-set-key (kbd "C-c c") 'mode-compile)
+(global-set-key (kbd "C-c k") 'mode-compile-kill)

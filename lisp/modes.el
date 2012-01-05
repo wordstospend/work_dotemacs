@@ -22,6 +22,28 @@
 (ac-config-default)
 (ac-flyspell-workaround)
 
+;; savehist: save some history
+(setq savehist-additional-variables    ;; also save...
+      '(search ring regexp-search-ring)    ;; ... my search entries
+      savehist-autosave-interval 60        ;; save every minute (default: 5 min)
+      savehist-file (concat "~/.emacs.d" "/savehist"))   ;; keep my home clean
+(savehist-mode t)                      ;; do customization before activation
+
+; Dont ask me questions, just do it ibuffer!
+(setq ibuffer-expert t)
+(setq ibuffer-auto-mode t)
+
+;Save the place you were in a buffer, when you switch out/back in
+(setq save-place-file "~/.emacs.d/saveplace") ;; keep my ~/ clean
+(setq-default save-place t)                   ;; activate it for all buffers
+(require 'saveplace)                          ;; get the package
+
+
+(autoload 'mode-compile "mode-compile"
+   "Command to compile current buffer file based on the major mode" t)
+(autoload 'mode-compile-kill "mode-compile"
+ "Command to kill a compilation launched by `mode-compile'" t)
+
 
 
 (provide 'load-modes)
