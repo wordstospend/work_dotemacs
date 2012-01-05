@@ -1,3 +1,4 @@
+; Loads ido-mode and various tweaks for it
 (require 'load-ido)
 
 ; Load all the global always-on modes
@@ -9,42 +10,27 @@
 ; Set up the my color theme, and all the colors for various things
 (require 'load-colors)
 
+; Set up my org-mode files and tweaks
 (require 'load-org)
 
-(require 'auto-install)
+; Set up autocompletion based on dabbrev
+(require 'load-autocomplete)
 
-(require 'crosshairs)
-; Provide it so it can be required, so theres an obvious dependency graph and you can just require and not worry about the location/whether or not its compiled(as opposed to load-file)
+; Set up saving current place in buffer and other save-related tweaks
+(require 'load-saves)
 
-; Set up auto-config with the default configurations
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/emacs/site-lisp/ac-dict")
-(ac-config-default)
-(ac-flyspell-workaround)
+; mode-compile does smart compiling based on buffer type
+(require 'load-compile)
 
-;; savehist: save some history
-(setq savehist-additional-variables    ;; also save...
-      '(search ring regexp-search-ring)    ;; ... my search entries
-      savehist-autosave-interval 60        ;; save every minute (default: 5 min)
-      savehist-file (concat "~/.emacs.d" "/savehist"))   ;; keep my home clean
-(savehist-mode t)                      ;; do customization before activation
+; Load my ibuffer customizations and so forth
+(require 'load-buffer)
 
-; Dont ask me questions, just do it ibuffer!
-(setq ibuffer-expert t)
-(setq ibuffer-auto-mode t)
+; Nifty package that draws a line in the buffer at fill-column
+(require 'load-fci)
 
-;Save the place you were in a buffer, when you switch out/back in
-(setq save-place-file "~/.emacs.d/saveplace") ;; keep my ~/ clean
-(setq-default save-place t)                   ;; activate it for all buffers
-(require 'saveplace)                          ;; get the package
-
-
-(autoload 'mode-compile "mode-compile"
-   "Command to compile current buffer file based on the major mode" t)
-(autoload 'mode-compile-kill "mode-compile"
- "Command to kill a compilation launched by `mode-compile'" t)
-
-
+; Sets up the popup-kill-ring package, which allows for easy navigation of the
+; kill ring
+(require 'load-popup)
 
 (provide 'load-modes)
 

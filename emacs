@@ -44,11 +44,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-auto-start 2)
- '(ac-delay 0.01)
+ '(ac-delay 0.02)
  '(ac-quick-help-delay 2.0)
  '(ac-show-menu-immediately-on-auto-complete nil)
+ '(bmkp-auto-light-relocate-when-jump-flag nil)
  '(bmkp-auto-light-when-jump nil)
  '(bmkp-auto-light-when-set (quote any-bookmark))
+ '(bmkp-crosshairs-flag nil)
  '(dvc-tips-enabled nil)
  '(ecb-options-version "2.40")
  '(erc-autojoin-channels-alist (quote (("irc.twilio.comy" "#watercooler"))))
@@ -75,7 +77,7 @@
  '(initial-buffer-choice nil)
  '(kpm-list-highlight-most-recent 3)
  '(large-file-warning-threshold nil)
- '(org-agenda-files (quote ("/Users/michaelsteger/org/devOpsTwilio.org" "/Users/michaelsteger/org/school.org" "/Users/michaelsteger/org/home.org" "/Users/michaelsteger/org/test.org" "/Users/michaelsteger/org/gtd.org" "/Users/michaelsteger/org/google.org" "/Users/michaelsteger/org/work.org" "/Users/michaelsteger/org/intern.twilio.org")) t)
+ '(org-agenda-files (quote ("/Users/michaelsteger/org/devOpsTwilio.org" "/Users/michaelsteger/org/school.org" "/Users/michaelsteger/org/home.org" "/Users/michaelsteger/org/test.org" "/Users/michaelsteger/org/gtd.org" "/Users/michaelsteger/org/google.org" "/Users/michaelsteger/org/work.org" "/Users/michaelsteger/org/intern.twilio.org")))
  '(org-agenda-skip-scheduled-if-done t)
  '(org-completion-use-ido t)
  '(quack-programs (quote ("stk-explorin" "bigloo" "csi" "csi -hygienic" "gosh" "gracket" "gsi" "gsi ~~/syntax-case.scm -" "guile" "kawa" "mit-scheme" "mzscheme" "racket" "racket -il typed/racket" "rs" "scheme" "scheme48" "scsh" "sisc" "stklos" "sxi")))

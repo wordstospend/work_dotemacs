@@ -35,3 +35,7 @@
 ; get the mode-compile stuff together
 (global-set-key (kbd "C-c c") 'mode-compile)
 (global-set-key (kbd "C-c k") 'mode-compile-kill)
+
+(global-set-key (kbd "C-c C-t") 'fci-mode)
+
+(global-set-key "\M-y" 'popup-kill-ring)
