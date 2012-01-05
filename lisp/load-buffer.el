@@ -14,9 +14,11 @@
 			(mode . css-mode)
 			(mode . js2-mode)))
 	 ("ERC" (mode . erc-mode))
+	 ("Magit" (name . "\*magit.*" ))
 	 ("Help" (or (name . "\*Help\*")
 		     (name . "\*Apropos\*")
 		     (name . "\*info\*"))))))
+
 (add-hook 'ibuffer-mode-hook
 	  '(lambda ()
 	     (ibuffer-switch-to-saved-filter-groups "home")))
