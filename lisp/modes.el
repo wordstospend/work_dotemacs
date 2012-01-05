@@ -1,3 +1,6 @@
+(setq here "/emacs/lisp/")
+
+(add-here "languages")
 ; Loads ido-mode and various tweaks for it
 (require 'load-ido)
 
@@ -32,5 +35,6 @@
 ; kill ring
 (require 'load-popup)
 
+(require 'load-languages)
 (provide 'load-modes)
 
