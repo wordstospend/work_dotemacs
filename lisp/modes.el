@@ -36,5 +36,6 @@
 (require 'load-popup)
 
 (require 'load-languages)
-(provide 'load-modes)
 
+
+(provide 'load-modes)
