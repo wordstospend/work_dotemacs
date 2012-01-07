@@ -100,4 +100,3 @@
  '(rainbow-delimiters-depth-5-face ((t (:foreground "brown"))))
  '(region ((t (:background "gray14"))))
  '(visible-mark-non-trailing-face0 ((t (:foreground "red" :underline t))) t))
-
