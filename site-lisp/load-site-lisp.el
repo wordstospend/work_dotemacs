@@ -7,6 +7,7 @@
 (add-here "elpa/org-20111220/contrib/lisp/")
 (add-here "predictive")
 (add-here "auto-complete")
+(add-here "find-things-fast/")
 
 (require 'js2-mode)
 

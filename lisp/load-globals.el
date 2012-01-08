@@ -29,7 +29,13 @@
 ;; Load up iedit, which allows you to edit all instances of a region, like an instance string-replace
 (require 'iedit)
 
-;; 
+(require 'coding-utils)
+
+(add-hook 'find-file 'coding-hook)
+
+
+
+;;
 (require 'dired+)
 
 (provide 'load-globals)

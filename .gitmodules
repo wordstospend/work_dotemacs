@@ -4,3 +4,6 @@
 [submodule "site-lisp/predictive"]
 	path = site-lisp/predictive
 	url = http://www.dr-qubit.org/git/predictive.git
+[submodule "site-lisp/find-things-fast"]
+	path = site-lisp/find-things-fast
+	url = https://github.com/eglaysher/find-things-fast.git

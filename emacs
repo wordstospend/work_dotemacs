@@ -22,15 +22,14 @@
  "My home directory — the root of my personal emacs load-path.")
 
 ;; add all the elisp directories under ~/emacs to my load path
-(add-here "emacs/lisp") ;; all my personal elisp code
 (add-here "emacs/site-lisp") ;; elisp stuff I find on the 'net
+(add-here "emacs/lisp") ;; all my personal elisp code
 (add-here "emacs/jde-2.3.2/lisp") ;; Java IDE support
 
-
+(load-library "load-site-lisp")
 (load-library "ekeys") ;; my key bindings and some aliases
 (load-library "efuncs") ;; a bunch of my own utility functions
 (load-library "modes") ;; configuration for 100-odd emacs modes
-(load-library "load-site-lisp")
 
 ;; load in customizations, which I keep in their own little petting zoo
 (load-library "~/.custom")

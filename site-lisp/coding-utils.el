@@ -96,7 +96,6 @@
 (defun coding-hook ()
   (flyspell-prog-mode)
   (local-comment-auto-fill)
-  (turn-on-whitespace)
   (turn-on-abbrev)
   (add-watchwords))
 
@@ -107,9 +106,10 @@
 (defun cleanup-buffer ()
   "Perform a bunch of operations on the whitespace content of a buffer."
   (interactive)
-  (indent-buffer)
+  (mark-whole-buffer)
+  (indent-region)
   (untabify-buffer)
-  (delete-trailing-whitespace))
+)
 
 ;; Other
 (defun eval-and-replace ()

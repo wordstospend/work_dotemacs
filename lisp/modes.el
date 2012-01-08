@@ -38,5 +38,6 @@
 
 (require 'load-languages)
 
+(require 'find-things-fast)
 
 (provide 'load-modes)
