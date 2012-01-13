@@ -39,3 +39,4 @@
 (global-set-key (kbd "C-c C-t") 'fci-mode)
 
 (global-set-key "\M-y" 'popup-kill-ring)
+(global-set-key (kbd "C-c o") 'occur)

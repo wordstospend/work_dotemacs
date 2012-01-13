@@ -40,4 +40,6 @@
 
 (require 'find-things-fast)
 
+(require 'load-ecb)
+
 (provide 'load-modes)

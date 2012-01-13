@@ -121,5 +121,4 @@
 
 (provide 'load-org)
 
-
-
+(add-hook 'org-finalize-agenda-hook 'org-agenda-to-appt)
