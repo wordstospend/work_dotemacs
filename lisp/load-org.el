@@ -15,6 +15,28 @@
 			     (concat home "/org/refile.org")
 			     ))
 
+
+(setq org-capture-templates
+      '(
+	("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+	 "* TODO %?\n  %i\n  %a")
+	("w" "Devops" entry (file+headline "~/org/devOpsTwilio.org" "Tasks")
+	 "* TODO %?\n  %i\n  %a")
+	("n" "Note" entry (file "~/org/refile.org")
+	 "* %? :NOTE:\n%U\n%a\n  %i" :clock-in t :clock-resume t)
+	("a" "Interesting" entry (file "~/national/interesting.org")
+	 "* %? :NOTE:\n%U\n%a\n  %i" :clock-in t :clock-resume t)
+	("e" "Emacs" entry (file "~/org/emacs.org")
+	 "* TODO %?\n  %i\n  %a" )
+	("i" "Intern" entry (file+headline "~/org/intern.twilio.org" "Intern")
+	 "* TODO %?\n %i\n %a")
+	("h" "Home" entry (file+headline "~/org/home.org" "Tasks")
+	 "* TODO %?\n  %i\n  %a")
+	("s" "School" entry (file+headline "~/org/school.org" "Tasks")
+	 "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+	 "* %?\nEntered on %U\n  %i\n  %a")))
+
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "STARTED(s)" "|" "DONE(d!/!)")
               (sequence "WAITING(w@/!)" "SOMEDAY(S!)" "|" "CANCELLED(c@/!)")
@@ -115,7 +137,7 @@
               ("A" "Tasks to Archive" tags "-REFILE/"
                ((org-agenda-overriding-header "Tasks to Archive")
                 (org-agenda-skip-function 'bh/skip-non-archivable-tasks)))))
-)
+      )
 
 (setq org-return-follows-link t)
 
