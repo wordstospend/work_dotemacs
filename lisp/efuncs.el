@@ -79,3 +79,6 @@
             (if dedicated "no longer " "")
             (buffer-name))))
 
+(add-hook 'isearch-mode-end-hook 'my-goto-match-beginning)
+(defun my-goto-match-beginning ()
+  (when isearch-forward (goto-char isearch-other-end)))
