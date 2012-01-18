@@ -144,7 +144,8 @@ after appropriate keywords."
 
 (defun ruby-insert-end ()
   (interactive)
-  (insert "end"))
+  (insert "end")
+  (ruby-indent-line))
 
 (defun ruby-electric-setup-keymap()
   (define-key ruby-mode-map (read-kbd-macro "<return>") 'ruby-electric-return)
@@ -158,7 +159,8 @@ after appropriate keywords."
       (save-excursion
 	(ruby-indent-line t)
 	(newline)
-	(ruby-insert-end))))
+	(ruby-insert-end))
+    (ruby-indent-line t)))
 
 (defun ruby-electric-code-at-point-p()
   (and ruby-electric-mode
