@@ -7,3 +7,6 @@
 [submodule "site-lisp/find-things-fast"]
 	path = site-lisp/find-things-fast
 	url = https://github.com/eglaysher/find-things-fast.git
+[submodule "site-lisp/Fill-Column-Indicator"]
+	path = site-lisp/Fill-Column-Indicator
+	url = https://github.com/alpaker/Fill-Column-Indicator.git

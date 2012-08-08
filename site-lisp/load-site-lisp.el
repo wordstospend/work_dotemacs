@@ -11,21 +11,9 @@
 (add-here "ecb-snap")
 
 (setq stack-trace-on-error 0)
-(require 'ecb)
-
-(global-ede-mode 1)
-(require 'semantic)
-(require 'semantic/sb)
-(require 'srecode)
-(global-srecode-minor-mode)
-(semantic-mode 1)
-
-
-;; (require 'ecb)
-(require 'js2-mode)
 
 ; js2mode kinda freaks out with autopair, so just let js2 do its thing without autopair
 (add-hook 'js2-mode-hook
           '(lambda () (setq autopair-dont-activate t)))
 
-(require 'magit)
+;(require 'magit)
