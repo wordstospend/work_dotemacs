@@ -37,3 +37,4 @@
 ;(eshell) ; adds some power to my shell from emacs
 (server-start)
 
+(put 'dired-find-alternate-file 'disabled nil)
